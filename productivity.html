@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balanced Life | Mindfulness</title>
+
+<style>
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #eef7f4, #ffffff);
+    color: #2c3e50;
+}
+
+header {
+    padding: 20px 50px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4a7c6f;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4a7c6f;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #3b6f63;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Breathing Circle */
+.breathing {
+    margin: 80px auto;
+    text-align: center;
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, #9fd3c7, #4a7c6f);
+    animation: breathe 8s infinite ease-in-out;
+}
+
+.breathing p {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+@keyframes breathe {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Practices */
+.practices {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.practices h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #4a7c6f;
+    margin-bottom: 10px;
+}
+
+/* Affirmation */
+.affirmation {
+    background: linear-gradient(to right, #4a7c6f, #6faea0);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.affirmation p {
+    font-size: 26px;
+    max-width: 700px;
+    margin: auto;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Balanced Life</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="inspiration.html">Inspiration</a>
+            <a href="wellness.html">Wellness</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Mindfulness</h1>
+    <p>Slow down. Breathe deeply. Become present in this moment.</p>
+</section>
+
+<section class="breathing">
+    <div class="circle"></div>
+    <p>Breathe in as the circle grows • Breathe out as it shrinks</p>
+</section>
+
+<section class="practices">
+    <h2>Mindful Practices</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🌿 Body Scan</h3>
+            <p>Notice sensations in your body without judgment.</p>
+        </div>
+        <div class="card">
+            <h3>📝 Gratitude</h3>
+            <p>Write down three things you're grateful for today.</p>
+        </div>
+        <div class="card">
+            <h3>👁 Awareness</h3>
+            <p>Observe your thoughts without reacting to them.</p>
+        </div>
+        <div class="card">
+            <h3>🌙 Stillness</h3>
+            <p>Spend 5 minutes in silence before sleep.</p>
+        </div>
+    </div>
+</section>
+
+<section class="affirmation">
+    <p>"You are exactly where you need to be."</p>
+</section>
+
+<footer>
+    <p>© 2026 Balanced Life. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

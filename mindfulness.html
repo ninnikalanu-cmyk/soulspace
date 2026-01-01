@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balanced Life | Mindfulness</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #f5fbf9, #ffffff);
+    color: #2c3e50;
+}
+
+/* Navbar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3a7d6c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3a7d6c;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #3a7d6c;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    color: #3a7d6c;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* Awareness Cards */
+.awareness {
+    padding: 80px 40px;
+    background: #ffffff;
+}
+
+.awareness h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #3a7d6c;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: #f7fdfb;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #3a7d6c;
+}
+
+/* Grounding */
+.grounding {
+    background: #eef7f4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.grounding h2 {
+    font-size: 32px;
+    color: #3a7d6c;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.step {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+/* Calm Reminder */
+.reminder {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.reminder-box {
+    display: inline-block;
+    background: linear-gradient(to right, #3a7d6c, #6bbfa8);
+    color: white;
+    padding: 35px 50px;
+    border-radius: 25px;
+    font-size: 22px;
+}
+
+/* Reflection */
+.reflection {
+    padding: 90px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.reflection textarea {
+    width: 80%;
+    max-width: 600px;
+    height: 140px;
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Balanced Life</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h1>Stillness Space</h1>
+    <p>Slow down. Notice the present moment. Nothing else is required.</p>
+</section>
+
+<section class="awareness">
+    <h2>Gentle Awareness</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🌿 Notice</h3>
+            <p>Observe your thoughts without judgment.</p>
+        </div>
+        <div class="card">
+            <h3>🧘 Accept</h3>
+            <p>Allow emotions to exist as they are.</p>
+        </div>
+        <div class="card">
+            <h3>💫 Release</h3>
+            <p>Let go of what you cannot control.</p>
+        </div>
+        <div class="card">
+            <h3>🌱 Return</h3>
+            <p>Bring your attention back to now.</p>
+        </div>
+    </div>
+</section>
+
+<section class="grounding">
+    <h2>Ground Yourself</h2>
+    <div class="steps">
+        <div class="step">5 things you see</div>
+        <div class="step">4 things you hear</div>
+        <div class="step">3 things you feel</div>
+        <div class="step">2 things you smell</div>
+        <div class="step">1 thing you appreciate</div>
+    </div>
+</section>
+
+<section class="reminder">
+    <div class="reminder-box">
+        You are safe. You are present. This moment is enough.
+    </div>
+</section>
+
+<section class="reflection">
+    <h2>Reflection Space</h2>
+    <p>Write freely. No one else will read this.</p>
+    <textarea placeholder="What are you noticing right now?"></textarea>
+</section>
+
+<footer>
+    <p>© 2026 Balanced Life. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

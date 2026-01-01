@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balanced Life | Inspiration</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+/* Global Styles */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif; }
+body {background:#f0f4f8; overflow-x:hidden; color:#333;}
+a {text-decoration:none; color:inherit;}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3a7d6c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3a7d6c;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #3a7d6c;
+}
+
+
+/* Hero Section with Parallax */
+.hero {
+    background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat fixed;
+    height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative;
+    color:#fff; overflow:hidden;
+}
+.hero::after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
+.hero-content {position:relative; z-index:2;}
+.hero-content h1 {font-size:48px; margin-bottom:15px;}
+.hero-content p {font-size:20px; margin-bottom:20px;}
+.hero-content .btn {background:#ffeaa7; color:#341f97; padding:12px 25px; border-radius:25px; font-weight:bold; transition:transform 0.3s;}
+.hero-content .btn:hover {transform:scale(1.05);}
+
+/* Floating Shapes */
+.shape {position:absolute; width:40px; height:40px; border-radius:50%; opacity:0.5; animation:float 15s linear infinite;}
+.shape.circle {background:#ffeaa7;}
+.shape.square {background:#74b9ff; transform:rotate(45deg);}
+.shape.small {width:20px; height:20px; opacity:0.3;}
+@keyframes float {
+    0% { transform:translateY(0) translateX(0) rotate(0deg);}
+    50% { transform:translateY(-400px) translateX(50px) rotate(180deg);}
+    100% { transform:translateY(-800px) translateX(0) rotate(360deg);}
+}
+
+/* Inspiration Cards Section */
+.inspiration-section {
+    padding:60px 50px; text-align:center; background:#dfe6e9; position:relative;
+}
+.inspiration-section h2 {font-size:36px; color:#6c5ce7; margin-bottom:30px;}
+
+/* Particle background behind cards */
+.particles {
+    position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; z-index:1;
+}
+.particle {
+    position:absolute; width:8px; height:8px; background:#ffeaa7; border-radius:50%; opacity:0.5;
+    animation:particleMove linear infinite;
+}
+@keyframes particleMove {
+    0% { transform:translateY(0) translateX(0);}
+    100% { transform:translateY(-600px) translateX(50px);}
+}
+
+.cards-container {
+    display:flex; flex-wrap:wrap; justify-content:center; gap:25px; position:relative; z-index:2;
+}
+.card {
+    background:#fff; padding:25px; width:280px; border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1); transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+    opacity:0; transform: translateY(50px); /* initially hidden for animation */
+}
+.card.visible {opacity:1; transform:translateY(0);}
+.card:hover {transform: rotate(-2deg) scale(1.05); box-shadow:0 12px 35px rgba(0,0,0,0.25);}
+.card img {width:100%; height:180px; object-fit:cover; border-radius:15px; margin-bottom:15px;}
+.card h3 {color:#341f97; margin-bottom:10px;}
+.card p {font-size:16px; line-height:1.4; color:#555;}
+
+/* Quote of the Day Section */
+.quote-section {
+    padding:60px 50px; background:linear-gradient(120deg,#a29bfe,#74b9ff);
+    color:#fff; text-align:center; border-radius:20px; margin:50px auto; position:relative;
+}
+.quote-section h2 {font-size:36px; margin-bottom:20px;}
+.quote-text {font-size:22px; font-style:italic; transition: opacity 1s;}
+.quote-author {margin-top:15px; font-weight:bold; font-size:18px;}
+
+/* Footer */
+footer {padding:30px 50px; text-align:center; background:#6c5ce7; color:#fff; margin-top:50px;}
+
+/* Responsive */
+@media(max-width:900px){.cards-container{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Balanced Life</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fuel Your Mind</h1>
+        <p>Discover inspiration, motivation, and mindfulness every day.</p>
+        <a href="wellness.html" class="btn">Explore Wellness</a>
+    </div>
+    <!-- Floating shapes -->
+    <div class="shape circle" style="left:10%; animation-duration:12s;"></div>
+    <div class="shape square" style="left:50%; animation-duration:18s;"></div>
+    <div class="shape circle small" style="left:80%; animation-duration:15s;"></div>
+</section>
+
+<!-- Inspiration Cards Section -->
+<section class="inspiration-section">
+    <div class="particles" id="particles"></div> <!-- Particle container -->
+    <h2>Daily Inspirations</h2>
+    <div class="cards-container">
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\nature.jpg" alt="Nature">
+            <h3>Embrace the Present</h3>
+            <p>"The present moment is the only time over which we have dominion."</p>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\creativity.jpg" alt="Creativity">
+            <h3>Unlock Creativity</h3>
+            <p>"Creativity takes courage." – Henri Matisse</p>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\motivation.jpg" alt="Motivation">
+            <h3>Stay Motivated</h3>
+            <p>"Start where you are. Use what you have. Do what you can."</p>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\mindfull.jpg" alt="Mindfulness">
+            <h3>Be Mindful</h3>
+            <p>"Mindfulness is the aware, balanced acceptance of the present experience."</p>
+        </div>
+    </div>
+</section>
+
+<!-- Creativity Video Section -->
+<section class="video-section">
+    <h2>Boost Your Creativity</h2>
+    <p>Watch these short videos to spark your imagination and motivation.</p>
+    <div class="video-cards">
+        <div class="video-card">
+            <video controls poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+                <source src="C:\Users\Anu\Downloads\video2.mp4" type="video/mp4">
+            </video>
+            <h3>Creative Meditation</h3>
+        </div>
+        <div class="video-card">
+            <video controls poster="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4">
+                <source src="C:\Users\Anu\Downloads\video3.mp4" type="video/mp4">
+            </video>
+            <h3>Mindful Sketching</h3>
+        </div>
+        <div class="video-card">
+            <video controls poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+                <source src="C:\Users\Anu\Downloads\video5.mp4" type="video/mp4">
+            </video>
+            <h3>Daily Inspiration</h3>
+        </div>
+    </div>
+</section>
+
+<style>
+.video-section {
+    padding: 60px 50px;
+    background: linear-gradient(120deg, #ffeaa7, #fab1a0);
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+.video-section h2 {
+    font-size: 36px;
+    color: #341f97;
+    margin-bottom: 15px;
+}
+.video-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #2d3436;
+}
+.video-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.video-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.video-card video {
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.video-card h3 {
+    font-size: 18px;
+    color: #341f97;
+}
+@media(max-width:900px){
+    .video-cards{
+        flex-direction: column;
+        align-items:center;
+    }
+}
+</style>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Balanced Life. All rights reserved.</p>
+</footer>
+
+<script>
+// Animate cards on scroll
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, {threshold: 0.3});
+cards.forEach(card => observer.observe(card));
+
+// Dynamic Quote of the Day
+const quotes = [
+    {text:"Happiness is not something ready made. It comes from your own actions.", author:"– Dalai Lama"},
+    {text:"The present moment is the only time over which we have dominion.", author:"– Thích Nhất Hạnh"},
+    {text:"Creativity takes courage.", author:"– Henri Matisse"},
+    {text:"Start where you are. Use what you have. Do what you can.", author:"– Arthur Ashe"},
+    {text:"Mindfulness is the aware, balanced acceptance of the present experience.", author:"– Tara Brach"}
+];
+let index = 0;
+setInterval(()=>{
+    const quoteText = document.getElementById('quoteText');
+    const quoteAuthor = document.getElementById('quoteAuthor');
+    index = (index + 1) % quotes.length;
+    quoteText.style.opacity=0; quoteAuthor.style.opacity=0;
+    setTimeout(()=>{
+        quoteText.innerText=quotes[index].text;
+        quoteAuthor.innerText=quotes[index].author;
+        quoteText.style.opacity=1; quoteAuthor.style.opacity=1;
+    },500);
+}, 8000);
+
+// Generate floating particles behind cards
+const particlesContainer = document.getElementById('particles');
+for(let i=0;i<30;i++){
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    p.style.left = Math.random()*100+'%';
+    p.style.top = Math.random()*100+'%';
+    p.style.width = p.style.height = (Math.random()*8 + 4)+'px';
+    p.style.animationDuration = (Math.random()*10 + 5)+'s';
+    p.style.opacity = Math.random()*0.6 + 0.2;
+    particlesContainer.appendChild(p);
+}
+</script>
+
+</body>
+</html>

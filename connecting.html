@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balanced Life | Connect</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #f6fbf9, #ffffff);
+    color: #2c3e50;
+}
+
+/* Common Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3a7d6c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3a7d6c;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #3a7d6c;
+}
+
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 90px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    color: #3a7d6c;
+}
+
+/* Connect Cards */
+.connect {
+    padding: 70px 20px;
+}
+
+.cards {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #3a7d6c;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #3a7d6c;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 20px;
+}
+
+.card a:hover {
+    background: #2f6f5f;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Balanced Life</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Balanced Life Hub</h1>
+    <p>Your space to explore balance in every part of life.</p>
+</section>
+
+<section class="connect">
+    <div class="cards">
+        <div class="card">
+            <h3>🏠 Home</h3>
+            <p>Start your journey into balance.</p>
+            <a href="index.html">Go</a>
+        </div>
+
+        <div class="card">
+            <h3>✨ Inspiration</h3>
+            <p>Ideas, motivation, and creativity.</p>
+            <a href="inspiration.html">Visit</a>
+        </div>
+
+        <div class="card">
+            <h3>💚 Wellness</h3>
+            <p>Healthy habits for body and mind.</p>
+            <a href="wellness.html">Visit</a>
+        </div>
+
+        <div class="card">
+            <h3>🌿 Mindfulness</h3>
+            <p>Slow down and be present.</p>
+            <a href="mindfulness.html">Visit</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Balanced Life. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
