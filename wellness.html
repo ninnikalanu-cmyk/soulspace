@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balanced Life | Wellness</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+/* Global Styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
+body{
+    background:#f7f9fb;
+    color:#333;
+}
+
+/* Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3a7d6c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3a7d6c;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #3a7d6c;
+}
+
+
+/* Hero Section */
+.hero{
+    height:60vh;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+.hero p{
+    font-size:20px;
+}
+
+/* Wellness Cards */
+.wellness-section{
+    padding:60px 50px;
+    text-align:center;
+}
+.wellness-section h2{
+    font-size:36px;
+    color:#27ae60;
+    margin-bottom:40px;
+}
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+.card{
+    background:#fff;
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:transform 0.4s, box-shadow 0.4s;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+.card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+.card h3{
+    color:#27ae60;
+    margin-bottom:10px;
+}
+.card p{
+    font-size:15px;
+    line-height:1.5;
+}
+
+/* Breathing Section */
+.breathing{
+    background:linear-gradient(120deg,#55efc4,#81ecec);
+    padding:70px 50px;
+    text-align:center;
+    color:#004d40;
+}
+.breathing h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+.breathing p{
+    font-size:18px;
+    margin-bottom:40px;
+}
+.circle{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#ffffff;
+    margin:0 auto;
+    animation:breathe 6s infinite;
+}
+@keyframes breathe{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.4);}
+    100%{transform:scale(1);}
+}
+
+/* Daily Wellness */
+.daily{
+    padding:60px 50px;
+    text-align:center;
+}
+.daily h2{
+    font-size:36px;
+    color:#27ae60;
+    margin-bottom:30px;
+}
+.habits{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.habit{
+    background:#eafaf1;
+    padding:20px 30px;
+    border-radius:30px;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    background:#2ecc71;
+    color:#fff;
+    padding:25px;
+    text-align:center;
+    margin-top:50px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Balanced Life</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>Wellness for Mind & Body</h1>
+        <p>Simple habits that create a balanced, peaceful life</p>
+    </div>
+</section>
+
+<!-- Wellness Cards -->
+<section class="wellness-section">
+    <h2>Wellness Practices</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\meditate.jpg">
+            <h3>Morning Meditation</h3>
+            <p>Start your day with 10 minutes of calm breathing and focus.</p>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\healthy.jpg">
+            <h3>Healthy Movement</h3>
+            <p>Gentle yoga or walking keeps your body energized.</p>
+        </div>
+        <div class="card">
+            <img src="C:\Users\Anu\Downloads\eating.jpg">
+            <h3>Mindful Eating</h3>
+            <p>Nourish your body with awareness and gratitude.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Breathing Exercise -->
+<section class="breathing">
+    <h2>Breathing Exercise</h2>
+    <p>Inhale as the circle grows, exhale as it shrinks</p>
+    <div class="circle"></div>
+</section>
+
+<!-- Daily Wellness -->
+<section class="daily">
+    <h2>Daily Wellness Checklist</h2>
+    <div class="habits">
+        <div class="habit">💧 Drink Water</div>
+        <div class="habit">🚶 Walk</div>
+        <div class="habit">🧘 Meditate</div>
+        <div class="habit">📖 Read</div>
+        <div class="habit">😴 Rest</div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Balanced Life. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
